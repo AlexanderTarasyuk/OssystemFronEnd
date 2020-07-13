@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Figures List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>createdDate</th>
+            <th>updatedDate</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let figure of figures | async">
+            <td>{{figure.firstName}}</td>
+            <td>{{figure.createdDate}}</td>
+            <td>{{figure.updatedDate}}</td>
+            <td><button (click)="deleteFigure(figure.id)" class="btn btn-danger">Delete</button>
+                <button (click)="figureDetails(figure.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="updateFigure(figure.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+<h2>Coordinate Details</h2>
+
+<hr/>
+<div *ngIf="figure">
+  <div>
+    <label><b>Name: </b></label> {{figure.firstName}}
+  </div>
+  <div>
+    <label><b>created date: </b></label> {{figure.createdDate}}
+  </div>
+  <div>
+    <label><b>updated date: </b></label> {{figure.updatedDate}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Coordinate List</button><br>
