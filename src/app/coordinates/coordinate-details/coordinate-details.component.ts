@@ -23,7 +23,7 @@ export class CoordinateDetailsComponent implements OnInit {
 
     this.id = this.route.snapshot.params['id'];
 
-    this.employeeService.getEmployee(this.id)
+    this.employeeService.getCoordinate(this.id)
       .subscribe(data => {
         console.log(data)
         this.figure = data;

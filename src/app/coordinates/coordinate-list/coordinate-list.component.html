@@ -13,13 +13,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let employee of employees | async">
-            <td>{{employee.firstName}}</td>
-            <td>{{employee.createdDate}}</td>
-            <td>{{employee.updatedDate}}</td>
-            <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
-                <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
-                <button (click)="updateEmloyeee(employee.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          <tr *ngFor="let coordinate of coordinates | async">
+            <td>{{coordinate.position}}</td>
+            <td>{{coordinate.x}}</td>
+            <td>{{coordinate.y}}</td>
+            <td><button (click)="deleteCoordinate(coordinate.id)" class="btn btn-danger">Delete</button>
+                <button (click)="coordinateDetail(coordinate.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="updateCoordinate(coordinate.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
             </td>
           </tr>
         </tbody>

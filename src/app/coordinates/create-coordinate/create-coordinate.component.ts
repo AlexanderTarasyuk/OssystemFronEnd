@@ -10,10 +10,10 @@ import { CoordinateService } from '../coordinate.service';
 })
 export class CreateCoordinateComponent implements OnInit {
 
-  employee: Coordinate = new Coordinate();
+  coordinate: Coordinate = new Coordinate();
   submitted = false;
 
-  constructor(private employeeService: CoordinateService,
+  constructor(private coordinateService: CoordinateService,
     private router: Router) { }
 
   ngOnInit() {
@@ -21,13 +21,13 @@ export class CreateCoordinateComponent implements OnInit {
 
   newEmployee(): void {
     this.submitted = false;
-    this.employee = new Coordinate();
+    this.coordinate = new Coordinate();
   }
 
   save() {
-    this.employeeService.createEmployee(this.employee)
+    this.coordinateService.createCoordinate(this.coordinate)
       .subscribe(data => console.log(data), error => console.log(error));
-    this.employee = new Coordinate();
+    this.coordinate = new Coordinate();
     this.gotoList();
   }
 
@@ -37,6 +37,6 @@ export class CreateCoordinateComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/figures']);
+    this.router.navigate(['/coordinates/list']);
   }
 }

@@ -21,7 +21,7 @@ export class UpdateCoordinateComponent implements OnInit {
 
     this.id = this.route.snapshot.params['id'];
 
-    this.employeeService.getEmployee(this.id)
+    this.employeeService.getCoordinate(this.id)
       .subscribe(data => {
         console.log(data)
         this.employee = data;
@@ -29,7 +29,7 @@ export class UpdateCoordinateComponent implements OnInit {
   }
 
   updateEmployee() {
-    this.employeeService.updateEmployee(this.id, this.employee)
+    this.employeeService.updateCoordinate(this.id, this.employee)
       .subscribe(data => console.log(data), error => console.log(error));
     this.employee = new Coordinate();
     this.gotoList();

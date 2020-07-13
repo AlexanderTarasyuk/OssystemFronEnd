@@ -9,6 +9,10 @@ import { FigureListComponent } from './figures/figurelist/figure-list.component'
 import { UpdateFigureComponent } from './figures/update-figure/update-figure.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {CoordinateListComponent} from "./coordinates/coordinate-list/coordinate-list.component";
+import {CoordinateDetailsComponent} from "./coordinates/coordinate-details/coordinate-details.component";
+import {UpdateCoordinateComponent} from "./coordinates/update-coordinate/update-coordinate.component";
+import {CreateCoordinateComponent} from "./coordinates/create-coordinate/create-coordinate.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +20,12 @@ import { FormsModule } from '@angular/forms';
     CreateFigureComponent,
     FigureDetailsComponent,
     FigureListComponent,
-    UpdateFigureComponent
+    UpdateFigureComponent,
+    CoordinateListComponent,
+    CoordinateDetailsComponent,
+    UpdateCoordinateComponent,
+    CreateCoordinateComponent
+
   ],
   imports: [
     BrowserModule,

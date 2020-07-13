@@ -6,15 +6,15 @@ import { Coordinate } from "../coordinate";
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-employee-list',
+  selector: 'app-coordinate-list',
   templateUrl: './coordinate-list.component.html',
   styleUrls: ['./coordinate-list.component.css']
 })
 export class CoordinateListComponent implements OnInit {
 
-  employees: Observable<Coordinate[]>;
+  coordinates: Observable<Coordinate[]>;
 
-  constructor(private employeeService: CoordinateService,
+  constructor(private coordinateService: CoordinateService,
     private router: Router) {}
 
   ngOnInit() {
@@ -22,11 +22,11 @@ export class CoordinateListComponent implements OnInit {
   }
 
   reloadData() {
-    this.employees = this.employeeService.getEmployeesList();
+    this.coordinates = this.coordinateService.getCoordinateList();
   }
 
-  deleteEmployee(id: number) {
-    this.employeeService.deleteEmployee(id)
+  deleteCoordinate(id: number) {
+    this.coordinateService.deleteCoordinate(id)
       .subscribe(
         data => {
           console.log(data);
@@ -35,10 +35,10 @@ export class CoordinateListComponent implements OnInit {
         error => console.log(error));
   }
 
-  employeeDetails(id: number){
-    this.router.navigate(['figures/details', id]);
+  coordinateDetail(id: number){
+    this.router.navigate(['coordinates/details', id]);
   }
-  updateEmloyeee (id:number){
-  this.router.navigate(['figures/update', id]);
+  updateCoordinate (id:number){
+  this.router.navigate(['coordinates/update', id]);
   }
 }
