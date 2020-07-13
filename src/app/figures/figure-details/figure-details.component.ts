@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'app-employee-details',
+  selector: 'app-figure-details',
   templateUrl: './figure-details.component.html',
   styleUrls: ['./figure-details.component.css']
 })

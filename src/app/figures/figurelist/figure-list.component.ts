@@ -6,7 +6,7 @@ import { Figure } from "../figure";
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-employee-list',
+  selector: 'app-figure-list',
   templateUrl: './figure-list.component.html',
   styleUrls: ['./figure-list.component.css']
 })

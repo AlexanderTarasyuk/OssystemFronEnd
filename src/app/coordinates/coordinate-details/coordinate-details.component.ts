@@ -6,31 +6,31 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'app-employee-details',
+  selector: 'app-figure-details',
   templateUrl: './coordinate-details.component.html',
   styleUrls: ['./coordinate-details.component.css']
 })
 export class CoordinateDetailsComponent implements OnInit {
 
   id: number;
-  figure: Coordinate;
+  coordinate: Coordinate;
 
   constructor(private route: ActivatedRoute,private router: Router,
-    private employeeService: CoordinateService) { }
+    private coordinateService: CoordinateService) { }
 
   ngOnInit() {
-    this.figure = new Coordinate();
+    this.coordinate = new Coordinate();
 
     this.id = this.route.snapshot.params['id'];
 
-    this.employeeService.getCoordinate(this.id)
+    this.coordinateService.getCoordinate(this.id)
       .subscribe(data => {
         console.log(data)
-        this.figure = data;
+        this.coordinate = data;
       }, error => console.log(error));
   }
 
   list(){
-    this.router.navigate(['figures/list']);
+    this.router.navigate(['coordinates/list']);
   }
 }
